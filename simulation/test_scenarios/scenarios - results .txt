@@ -1,0 +1,28 @@
+**** Scenario 1 ****
+Road: 1375 M
+Total Cost = 911.1
+Precision = %85.6
+Recall = %91.2
+
+**** Scenario 2 ****
+Road: 1343 M
+Total Cost = 669.3
+Precision = %95.6
+Recall = %89.4
+
+**** Scenario 3 ****
+Road: 1929 M
+Total Cost = 612.6
+Precision = %90.04
+Recall = %93.69
+
+
+**** Scenario 4 ****
+Road: 2218 M
+Total Cost = 484.42
+Precision = %89.44
+Recall = %90
+
+
+85.6 95.6 90.04 89.44
+91.2 89.4 93.69 90

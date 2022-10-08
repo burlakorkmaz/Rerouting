@@ -1,0 +1,139 @@
+Tracking metotunda arabaların çevresi ile belirlenen oranlar doğrultusunda, algoritma, frameler arası maksimum 2.6524 metrelik bir değişime kadar gözlem yapabilmektedir. Örneğin 40 km/h ile giden bir araba gözlemlenirken, eğer fps 5 ise, araba sorunsuz tracklenirken, fps 4 e düşürüldüğünde hız limiti aşılır ve araç irrelevant olarak gözükmeye başlar. Bu durum, projenin asıl amacı olan hızın yavaş olduğu yerleri tespit etmeye çalışmaya ters düşmemek ile birlikte, 15 km/h hızına kadar olan araçları, 2 fps lik bir çekim ile yüksek bir performans ile trackleyebilmektedir. Burada söz konusu olan fps değeri, gözlem yapan kameranın çektiği fps olmakla birlikte, çekimler sırasında veya devamında model sorunsuz bir şekilde çalışabilmektedir.
+
+--------------------------------------------------------------------------------
+
+**** Scenario 1 ****
+
+Road: 1375 M
+
+-- Groups --
+24.25 meter, 6 score, distance 100%, score 60%, direction 100%
+27.7 meter, 4 score, distance 100%, score 100%, direction 100%
+9.95 meter, 6 score, distance 100%, score 60%, direction 100%
+31.05 meter, 6 score, distance 100%, score 60%, direction 100% (Detection problem - 
+object intersection)
+10 meter, 6 score, distance 100%, score 60%, direction 50%
+22 meter, 5 score, distance 100%, score 80%, direction 100%
+11.85 meter, 6 score, distance 78%, score 100%, direction 100% (Detection problem - 
+object intersection)
+19.65 meter, 6 score, distance 100%, score 0%, direction 0%  (Low fps problem)
+16.3 meter, 4 score, distance 100%, score 0%, direction 0% (Low fps problem)
+45.45 meter, 6 score, distance 100%, score 60%, direction 100%
+44.65 meter, 6 score, distance 100%, score 60%, direction 100%
+25.25 meter, 5 score, distance 100%, score 80%, direction 100%
+35.35 meter, 6 score, distance 100%, score 60%, direction 100%
+16.4 meter, 6 score, distance 100%, score 60%, direction 100%
+17.85 meter, 4 score, distance 72%, score 100%, direction 100% (Detection problem - light angel/landscapes)
+14 meter, 4 score, distance 85%, score 100%, direction 100% (Detection problem - light angel/landscapes)
+17 meter, 6 score, distance 100%, score 100%, direction 100%
+
+-- Total --
+
+265.6 M - 6 score - 97.8% distance accuracy - 68% score accuracy - 100% direction accuracy
+22 M - 5 score - 100% distance accuracy - 80% score accuracy - 100% direction accuracy
+75.85 M - 4 score - 89.25% distance accuracy - 100% score accuracy - 100% direction accuracy - 
+
+Total Cost = 1375*0.115 + 2.323*265.6 + 1.592*22 + 1.331*75.85 = 911.1
+
+Precision = %85.6
+Recall = %91.2
+
+--------------------------------------------------------------------------------------
+
+**** Scenario 2 ****
+
+Road: 1343 M
+
+-- Groups --
+
+20.3 meter, 6 score, distance 100%, score 100%, direction 100%
+31.05 meter, 5 score, distance 100%, score 80%, direction 100% (Detection problem - object intersection)
+20.09 meter, 4 score, distance 100%, score 100%, direction 100%
+16.85 meter, 4 score, distance 100%, score 100%, direction 100%
+36.4 meter, 6 score, distance 100%, score 60%, direction 75% (Detection problem - object intersection)
+25.5 meter, 4 score, distance 100%, score 100%, direction 100%
+40.53 meter, 3 score, distance 100%, score 100%, direction 100%
+39.4 meter, 6 score, distance 100%, score 60%, direction 100%
+30.35 meter, 4 score, distance 100%, score 100%, direction 100%
+20.07 meter, 4 score, distance 60%, score 100%, direction 100%
+26.7 meter, 6 score, distance 100%, score 60%, direction 100%
+22.5 meter, 4 score, distance 100%, score 100%, direction 100%
+
+-- Total --
+
+122,8 M - 6 score - 100% distance accuracy - 70% score accuracy - 93.75% direction accuracy
+31.05 M - 5 score - 100% distance accuracy - 80% score accuracy - 100% direction accuracy
+135.36 M - 4 score - 93.33% distance accuracy - 100% score accuracy - 100% direction accuracy
+
+Total Cost = 1343*0.115 + 2.323*122.8 + 1.592*31.05 + 1.331*135.36 = 669.3
+
+Precision = %95.6
+Recall = %89.4
+
+------------------------------------------------------------------------------------------
+
+**** Scenario 3 ****
+
+Road: 1929 M
+
+-- Groups --
+
+52.1 meter, 5 score, distance 85%, score 80%, direction 100%
+32.3 meter, 4 score, distance 100%, score 100%, direction 100%
+21.7 meter, 6 score, distance 85%, score 60%, direction 100%
+19.2 meter, 6 score, distance 100%, score 60%, direction 100%
+34.2 meter, 4 score, distance 100%, score 100%, direction 100%
+19.6 meter, 4 score, distance 80%, score 100%, direction 100%
+21.7 meter, 6 score, distance 100%, score 60%, direction 100%
+16.85 meter, 4 score, distance 100%, score 100%, direction 100%
+15.95 meter, 5 score, distance 100%, score 100%, direction 100%
+
+-- Total --
+
+62.6 M - 6 score - 95% distance accuracy - 60% score accuracy - 100% direction accuracy
+68.05 M - 5 score - 92.5% distance accuracy - 90% score accuracy - 100% direction accuracy
+102.95 M - 4 score - 93.3% distance accuracy - 100% score accuracy - 100% direction accuracy
+
+Total Cost = 1929*0.115 + 2.323*62.6 + 1.592*68.05 + 1.331*102.95 = 612.6
+
+Precision = %90.04
+Recall = %93.69
+
+--------------------------------------------------------------------------------------------
+
+
+**** Scenario 4 ****
+
+Road: 2218 M
+
+-- Groups --
+
+17.6 meter, 4 score, distance 100%, score 100%, direction 100%
+13.9 meter, 6 score, distance 50%, score 60%, direction 100%
+37.3 meter, 4 score, distance 85%, score 100%, direction 100%
+30.75 meter, 6 score, distance 95%, score 60%, direction 100%
+20.85 meter, 6 score, distance 100%, score 60%, direction 100%
+14.55 meter, 3 score, distance 85%, score 100%, direction 100%
+
+-- Total --
+
+65.5 M - 6 score - 81.66% distance accuracy - 60% score accuracy - 100% direction accuracy
+54.09 M - 4 score - 92.5% distance accuracy - 100% score accuracy - 100% direction accuracy
+14.55 M - 3 score - 85% distance accuracy - 100% score accuracy - 100% direction accuracy
+
+Total Cost = 2218*0.115 + 2.323*65.5 + 1.331*54.09 + 0.3576*14.55 = 484.42
+
+Precision = %89.44
+Recall = %90
+
+
+
+y ekseni dikey eksen, hız olsun, bir senaryo içerisindeki bütün senaryoların ortalama hızı
+x ekseni total cost
+z ekseni yol
+
+
+
+
+
+

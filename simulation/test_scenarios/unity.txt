@@ -1,0 +1,10 @@
+Unity oyun motoru versiyon 2019.3.15f1
+
+The simulation is built with Unity and the map is built on AirSim Windridge City Asset \cite{windridgecity} which is populated with vehicles that simulate movements of vehicles in traffic congestion and a drone that has a camera to take aerial images. \cite{niemirepo2019open} The simulation provides an average of 60 fps with an Intel (R) Core (TM) i7-10750H 12 core CPU on an RTX 2070S graphics card.
+
+The simulation has objects such as traffic signs, overpasses, trees, flowerpots, traffic signs, road lights, traffic lights, roadside garbage, fire extinguishers, benches, barriers, and cafe umbrellas in traffic in a real city while taking a bird's-eye view.
+
+The vehicle used in the simulation environment is the Audi Q8 2019, which has a length of 4.99 meters, a width of 2 meters and a height of 1.7 meters, and is available in 7 different colors. While the height of the drone may vary, it is 50 meters above the road during the tests and sees an area of 96 meters x 54 meters from the bird's eye view. The camera shots were made to obtain 1920x1080p images and the images were converted into real-life measurements in line with this resolution. Vehicles in the simulation can travel between 0 km / h and 50 km / h.
+
+The objects in the simulation are used in a way that is compatible with real life. During the bird's eye view, realism is provided by using traffic lights, traffic lights, overpasses, and traffic signs to cover the road.
+
