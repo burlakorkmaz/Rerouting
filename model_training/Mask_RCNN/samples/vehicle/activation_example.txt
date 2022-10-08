@@ -1,0 +1,13 @@
+activate PythonGPU
+
+cd C:\Users\MONSTER\Desktop\transfer\Mask_RCNN-final\samples\vehicle
+
+python vehicle.py train --dataset=C:\Users\MONSTER\Desktop\transfer\Mask_RCNN-final\samples\vehicle\dataset --weights=coco
+
+
+
+
+
+cd C:\Users\arasu\Desktop\otherLaptop\transfer\Mask_RCNN-final\samples\vehicle
+
+python vehicle.py train --dataset=C:\Users\arasu\Desktop\otherLaptop\transfer\Mask_RCNN-final\samples\vehicle\dataset --weights=coco

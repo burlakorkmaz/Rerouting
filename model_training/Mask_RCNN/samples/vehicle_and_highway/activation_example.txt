@@ -1,0 +1,7 @@
+activate PythonGPU
+
+cd C:\Users\MONSTER\Desktop\transfer\Mask_RCNN-final\samples\vehicle_and_highway
+
+python vehicle_and_highway.py train --dataset=C:\Users\MONSTER\Desktop\transfer\Mask_RCNN-final\samples\vehicle_and_highway\dataset --weights=coco
+
+python vehicle_and_highway.py train --dataset=C:\Users\MONSTER\Desktop\transfer\Mask_RCNN-final\samples\vehicle_and_highway\dataset --weights=last
